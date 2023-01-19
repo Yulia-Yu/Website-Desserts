@@ -1,0 +1,363 @@
+extends Memain
+
+block menu
+	+createMenu(1)
+
+block content
+	.main-block
+		.content2
+			.text3 
+				details
+					summary  Сортировка:
+					span Первый уровень 
+					br
+					select(name="l1")
+						option(value="0" selected) Нет
+						option(value="1") Тип
+						option(value="2") Название
+						option(value="3") Уровень сложности
+						option(value="4") Время приготовления
+					br
+					span Второй уровень
+					br
+					select(name="l2") 
+						option(value="0" selected) Нет
+						option(value="1") Тип
+						option(value="2") Название
+						option(value="3") Уровень сложности
+						option(value="4") Время приготовления
+					br
+					span Третий уровень
+					br
+					select(name="l3") 
+						option(value="0" selected) Нет
+						option(value="1") Тип
+						option(value="2") Название
+						option(value="3") Уровень сложности
+						option(value="4") Время приготовления
+					br
+					br
+					button Сортировать
+				br
+				details 
+					summary Фильтр
+					lable Тип
+					input(type="text"  name="tip")
+					br
+					lable Время приготовления: 
+					br
+					lable от
+					input(type="number" name="t1" min="1" max="300") 
+					lable до
+					input(type="number" name="t2" min="1" max="300")
+					br
+					lable Уровень сложности:
+					br
+					lable от
+					input(type="number" name="n1" max="10" min="1")
+					lable до
+					input(type="number" name="n1" max="10" min="1")
+					br
+					br
+					button Найти
+
+
+				br
+				details
+					summary График
+					span По оси OX: 
+					br
+					input(type="radio" name="graf" value="0")
+					lable Тип
+					br
+					input(type="radio" name="graf" value="1")
+					lable Название
+					br
+					input(type="radio" name="graf" value="2")
+					lable Уровень сложности
+					br
+					span Результат: 
+					br
+					input(type="checkbox" name="res" value="0") 
+					lable Максимальное время
+					br
+					input(type="checkbox" name="res" value="1")
+					lable Минимальное время
+					br
+					input(type="checkbox" name="res" value="2")
+					lable Количество десертов
+					br
+					br
+					button Создать График
+
+			.text4 
+				table
+					tr
+						th Тип
+						th Название
+						th Время приготовления
+						th Сложность
+					tr
+						td Торт
+						td Три шоколада
+						td 180
+						td 9
+					tr
+						td Кекс
+						td Кекс в кружке
+						td 10
+						td 1
+					tr
+						td Пирог
+						td Шарлотка с яблоками
+						td 50
+						td 3
+					tr
+						td Чизкейк
+						td Банановый чизкейк без выпечки
+						td 240
+						td 6
+					tr
+						td Пирог
+						td Малинка
+						td 70
+						td 5
+					tr
+						td Кекс
+						td Банановый кекс на молоке
+						td 50
+						td 3
+					tr
+						td Рулет
+						td Творожный рулет с яблоками
+						td 30
+						td 5
+					tr
+						td Пирог
+						td Пирог с вареньем
+						td 120
+						td 7
+					tr
+						td Кекс
+						td Сырный кекс на кефире
+						td 70
+						td 6
+					tr
+						td Рулет
+						td Баунти (безвыпечки)
+						td 70
+						td 3
+					tr
+						td Мусс
+						td Шоколадно-сметанный мусс
+						td 140
+						td 4
+				
+					tr
+						td Пирог
+						td Брауни
+						td 55
+						td 7
+             
+					tr
+						td Чизкейк
+						td Классический
+						td 240
+						td 7
+
+					tr
+						td Пирог
+						td Королевская ватрушка
+						td 40
+						td 5
+						
+					tr
+						td Пироженое
+						td Баунти
+						td 100
+						td 7
+									
+					tr
+						td Кекс
+						td Шоколадный фондан
+						td 30
+						td 8
+					tr
+						td Мусс
+						td Кофейный кпем-мусс
+						td 30
+						td 2
+					tr
+						td Торт
+						td Сметанный торт
+						td 60
+						td 4
+									
+					tr
+						td Печенье
+						td Сметанное печенье
+						td 30
+						td 2
+						
+					tr
+						td Кекс
+						td Шоколадный трайфл с бананом и киви
+						td 90
+						td 3
+					tr
+						td Конфеты
+						td Рафаэлло
+						td 80
+						td 4
+					tr
+						td Конфеты
+						td Кейк-попс
+						td 90
+						td 5
+					tr
+						td Печенье
+						td Сладкая колбаса
+						td 180
+						td 1
+					tr
+						td Торт
+						td Карпезе
+						td 70
+						td 8
+					tr
+						td Печенье
+						td Ёлочки
+						td 105
+						td 3
+
+					tr
+						td Пирог
+						td Искушение в раю
+						td 80
+						td 8
+					tr
+						td Торт
+						td Ягодный торт-семифредо с теплым шоколадным соусом
+						td 300
+						td 10
+					tr
+						td Торт
+						td Эстерхази
+						td 70
+						td 10
+					tr
+						td Печенье
+						td Сладкие замороженные сэндвичи
+						td 120
+						td 5
+					tr
+						td Печенье
+						td Шоколадная колбаса с сухофруктами
+						td 180
+						td 3
+					tr
+						td Пирог
+						td Амереканский тыквенный пирог с корицей
+						td 120
+						td 5
+					tr
+						td Кекс
+						td Морковные кексы с имберем и корицей
+						td 60
+						td 4
+					tr
+						td Печенье
+						td Песочное печенье
+						td 60
+						td 2
+					tr
+						td Кекс
+						td Шоколадные кексы с жидкой сахарной начинкой
+						td 30
+						td 7
+					tr
+						td Торт
+						td Наполеон
+						td 240
+						td 8
+					tr
+						td Печенье
+						td Имбирное печенье с ванильным сахаром
+						td 20
+						td 2
+					tr
+						td Печенье
+						td Овсяное печенье с изюмом и кунжутом
+						td 25
+						td 4
+					tr
+						td Пирог
+						td Морковный пирог с минадалем
+						td 80
+						td 6
+					tr
+						td Булочки
+						td Шведские булочки с корицей
+						td 85
+						td 7
+					tr
+						td Торт
+						td Прага
+						td 80
+						td 8
+					tr
+						td Пирог
+						td Яблочный пирог
+						td 30
+						td 5
+					tr
+						td Пирог
+						td Шоколадный пирог с маскарпоне
+						td 30
+						td 7
+					tr
+						td Печенье
+						td Бакинское курабье
+						td 30
+						td 5
+					tr
+						td Кекс
+						td кекс апельсиновый
+						td 60
+						td 4
+					tr
+						td Пирог
+						td Клубничный пирог с ванилью
+						td 85
+						td 9
+					tr
+						td Профитроли
+						td Домашние заварные профитроли
+						td 60
+						td 7
+					tr
+						td Конфеты
+						td Шоколадные трюфели в какао
+						td 40
+						td 3
+					tr
+						td Булочки
+						td Чешская булочка трдло
+						td 60
+						td 7
+					tr
+						td Торт
+						td Три крема
+						td 60
+						td 6
+					tr
+						td Торт
+						td Мдовик
+						td 40
+						td 4
+					tr
+						td Панна-котта
+						td Панна-котта с клубникой
+						td 180
+						td 10
+             
